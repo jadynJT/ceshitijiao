@@ -1,0 +1,121 @@
+//
+//  PrefixHeader.pch
+//  LaoBaiXingDaYaoFang
+//
+//  Created by apple on 16/4/19.
+//  Copyright © 2016年 TW. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "TWWebViewComponent.h"
+#import "SVProgressHUD.h"
+#import "AuthManager.h"
+#import "PPNetworkHelper.h"
+#import "TJBluetoothEngine.h"
+#import "Utility.h"
+#import "Masonry.h"
+#import "DataModel.h"
+#import "DataCenter.h"
+#import "Singleton.h"
+
+#import "MeasurePageViewController.h"
+#import "SearchViewController.h"
+#import "MemerShipViewController.h"
+#import "SlowDiseaseMemberViewController.h"
+#import "MainVC.h"
+#import "DataCenter.h"
+#import "AuthManager.h"
+
+/**
+ *  弱指针
+ */
+#define WeakSelf(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#define UISCREEN_BOUNCES       [[UIScreen mainScreen]bounds]
+#define UISCREEN_height        [[UIScreen mainScreen] bounds].size.height
+#define UISCREEN_width         [[UIScreen mainScreen] bounds].size.width
+
+#define Proportion_height    736.0*UISCREEN_BOUNCES.size.height
+
+// 16进制转RGB
+#define UIColorFromRGBA(rgbValue, alphaValue)\
+[UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0x0000FF))/255.0 \
+alpha:alphaValue]
+
+// AlertView
+#define SHOW_ALERT(msg) UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];\
+[alert show];\
+
+#define SHOW_ALERT_Title(title,msg) UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:msg delegate:nil cancelButtonTitle:title otherButtonTitles:nil, nil];\
+[alert show];\
+
+#define SHOW_ALERT_Three(title,msg,cancelBtnTitle) UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:cancelBtnTitle otherButtonTitles:nil, nil];\
+[alert show];\
+
+#define UISCREEN_BOUNCES     [[UIScreen mainScreen]bounds]
+#define Screen_height        [[UIScreen mainScreen] bounds].size.height
+#define Screen_width         [[UIScreen mainScreen] bounds].size.width
+
+#define USER_D [NSUserDefaults standardUserDefaults]
+
+// 适配 iPhone X
+#define IsiPhoneX [[UIScreen mainScreen] bounds].size.width>=375.0f && [[UIScreen mainScreen] bounds].size.height>=812.0f && IS_IPHONE
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+#define statusHeight [UIApplication sharedApplication].statusBarFrame.size.height
+#define iphoneX (BOOL)(statusHeight == 44?(YES):(NO))
+
+#define StatusBarHeight   (CGFloat)(IsiPhoneX?(44):(20))    // 适配iPhone X状态栏高度
+#define NavigationHeight  (CGFloat)(IsiPhoneX?(88):(64))    // 适配iPhone X导航栏高度
+#define TabBarHeight      (CGFloat)(IsiPhoneX?(49+34):(49)) // 适配iPhone X Tabbar高度
+#define TopBarSafeHeight  (CGFloat)(IsiPhoneX?(44):(0))     // 顶部安全区域远离高度
+#define BottomSafeHeight  (CGFloat)(IsiPhoneX?(34):(0))     // 底部安全区域远离高度
+#define StateBarDifHeight (CGFloat)(IsiPhoneX?(24):(0))     // iPhone X的状态栏高度差值
+
+// iPhoneXR
+#define IS_SCREEN_61_INCH   ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+
+// plist
+#define PLIST_DICT          [NSMutableDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"AutoInfo" ofType:@"plist"]]
+
+//#define URL_DOMAIN_NAME     [PLIST_DICT objectForKey:@"URL_Domain_Name2"]
+#define HRIGHT_PROGRESS     [PLIST_DICT objectForKey:@"Height_Progress"]
+#define WX_APPKEY           [PLIST_DICT objectForKey:@"WX_Appkey"]
+
+#define WEB_URL             [NSString stringWithFormat:@"http://%@",URL_DOMAIN_NAME]
+
+// 慢病管理--跳转页面
+#define URL_INSTRUCTION     [NSString stringWithFormat:@"http://%@/healthmeasure/explain",URL_DOMAIN_NAME]
+#define URL_RECORD          [NSString stringWithFormat:@"http://%@/healthmeasure/datastatistics?uid=&sid=1",URL_DOMAIN_NAME]
+#define URL_MEASURE_RESULT  [NSString stringWithFormat:@"http://%@/healthmeasure/measurements",URL_DOMAIN_NAME]
+#define URL_LOGINOUT        [NSString stringWithFormat:@"http://%@/user/logout",URL_DOMAIN_NAME]
+//血糖跳转
+#define URL_GLUCOSE_RECORD    [NSString stringWithFormat:@"http://%@/glumeasure/measuringrecord",URL_DOMAIN_NAME]
+
+
+// 慢病管理--请求url
+#define URL_MANUAL_SAVE     [NSString stringWithFormat:@"http://%@/healthmeasure/savedo",URL_DOMAIN_NAME]
+#define URL_MANUAL_PAGE     [NSString stringWithFormat:@"http://%@/healthmeasure/manualmeasurements",URL_DOMAIN_NAME]
+#define URL_SEARCH          [NSString stringWithFormat:@"http://%@/healthmeasure/searchmember",URL_DOMAIN_NAME]
+#define URL_LATEST_MEMBER   [NSString stringWithFormat:@"http://%@/healthmeasure/getnewchronic",URL_DOMAIN_NAME]
+#define URL_ADD             [NSString stringWithFormat:@"http://%@/healthmeasure/chronicadd",URL_DOMAIN_NAME]
+
+// 血糖测量手动保存
+#define URL_BLOODGLUCOSE_MANUAL_SAVE [NSString stringWithFormat:@"http://%@/api/glucose/insert",URL_DOMAIN_NAME]
+
+#define URL_LOCATION       [NSString stringWithFormat:@"http://%@/home/savelocation",URL_DOMAIN_NAME]
+
+
+// 根据不同环境配置设置不同域名
+#ifdef WaiCe
+#define URL_DOMAIN_NAME     [PLIST_DICT objectForKey:@"URL_Domain_Name"]
+#else
+#define URL_DOMAIN_NAME     [PLIST_DICT objectForKey:@"URL_Domain_Name2"]
+#endif
+
+#endif /* PrefixHeader_pch */

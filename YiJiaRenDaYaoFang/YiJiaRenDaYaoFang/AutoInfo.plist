@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>URL_Domain_Name</key>
+	<string>m.yjr86.com</string>
+	<key>URL_Domain_Name2</key>
+	<string>demo.m.shop.twyyx.com:8080</string>
+	<key>WX_Appkey</key>
+	<string>wx979567a297da047b</string>
+	<key>Height_Progress</key>
+	<real>2.2</real>
+</dict>
+</plist>

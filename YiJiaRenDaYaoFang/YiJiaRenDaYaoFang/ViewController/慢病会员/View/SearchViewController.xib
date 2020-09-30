@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController">
+            <connections>
+                <outlet property="searchBar" destination="uha-GH-Z4C" id="M2i-U8-Yfw"/>
+                <outlet property="searchBtn" destination="ERA-6I-QBz" id="80I-II-88N"/>
+                <outlet property="searchDisplayController" destination="cJn-Hj-BaP" id="AHe-46-FrD"/>
+                <outlet property="tableView" destination="Hy5-Vd-xIA" id="eH9-p4-Lif"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ERA-6I-QBz">
+                    <rect key="frame" x="258" y="41" width="54" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="搜索"/>
+                    <connections>
+                        <action selector="searchAction:" destination="-1" eventType="touchUpInside" id="w4b-l3-cqE"/>
+                    </connections>
+                </button>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" id="uha-GH-Z4C">
+                    <rect key="frame" x="0.0" y="34" width="250" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hy5-Vd-xIA">
+                    <rect key="frame" x="0.0" y="84" width="320" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <point key="canvasLocation" x="446.37681159420293" y="260.49107142857144"/>
+        </view>
+        <searchDisplayController id="cJn-Hj-BaP">
+            <connections>
+                <outlet property="delegate" destination="-1" id="XAn-oT-NHU"/>
+                <outlet property="searchContentsController" destination="-1" id="0d0-sU-Anm"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="sUv-Td-7Gg"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="EC8-7u-el6"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+</document>

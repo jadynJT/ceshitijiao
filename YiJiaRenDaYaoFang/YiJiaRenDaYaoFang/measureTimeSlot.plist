@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>item 0</key>
+	<string>凌晨</string>
+	<key>item1</key>
+	<string>早餐前</string>
+	<key>item2</key>
+	<string>早餐后</string>
+	<key>item3</key>
+	<string>午餐前</string>
+	<key>item4</key>
+	<string>午餐后</string>
+	<key>item5</key>
+	<string>晚餐前</string>
+	<key>item6</key>
+	<string>晚餐后</string>
+	<key>item7</key>
+	<string>睡前</string>
+</dict>
+</plist>
