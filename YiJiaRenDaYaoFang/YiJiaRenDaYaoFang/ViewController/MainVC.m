@@ -46,6 +46,8 @@
     [super viewDidLoad];
     
     [self configBgView]; // 显示蒙版
+    
+    NSLog(@"添加到当前内容");
 }
 
 #pragma mark - 初始化
