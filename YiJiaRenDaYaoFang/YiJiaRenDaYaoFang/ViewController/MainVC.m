@@ -47,6 +47,7 @@
     
     [self configBgView]; // 显示蒙版
     
+    NSLog(@"heiei");
     NSLog(@"添加到当前内容是是是");
 }
 
