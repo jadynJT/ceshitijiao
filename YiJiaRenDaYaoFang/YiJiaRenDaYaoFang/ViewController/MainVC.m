@@ -68,6 +68,15 @@
     return _topView;
 }
 
+- (void)addButton {
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn addTarget:self action:@selector(aaa:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)aaa:(UIButton *)sender {
+    
+}
+
 - (UIButton *)countdownBtn {
     if (!_countdownBtn) {
         CGFloat topOrigin = 25;
