@@ -52,6 +52,8 @@
     
     NSLog(@"添加1");
     NSLog(@"添加2");
+    
+    NSLog(@"查看11");
 }
 
 #pragma mark - 初始化
