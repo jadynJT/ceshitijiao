@@ -49,6 +49,8 @@
     
     NSLog(@"heiei");
     NSLog(@"添加到当前内容是是是");
+    
+    NSLog(@"添加1");
 }
 
 #pragma mark - 初始化
