@@ -53,7 +53,11 @@
     NSLog(@"添加1");
     NSLog(@"添加2");
     
+<<<<<<< HEAD
     NSLog(@"查看11");
+=======
+    NSLog(@"查看222");
+>>>>>>> develope
 }
 
 #pragma mark - 初始化
@@ -97,6 +101,8 @@
         _countdownBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         
         [_countdownBtn addTarget:self action:@selector(hiddenSkipBtn) forControlEvents:UIControlEventTouchUpInside];
+        
+        NSLog(@"countdownBtn");
     }
     return _countdownBtn;
 }
