@@ -97,6 +97,8 @@
         _countdownBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         
         [_countdownBtn addTarget:self action:@selector(hiddenSkipBtn) forControlEvents:UIControlEventTouchUpInside];
+        
+        NSLog(@"countdownBtn");
     }
     return _countdownBtn;
 }
