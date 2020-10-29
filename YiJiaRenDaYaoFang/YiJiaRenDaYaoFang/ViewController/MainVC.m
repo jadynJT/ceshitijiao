@@ -53,7 +53,7 @@
     NSLog(@"添加1");
     NSLog(@"添加2");
     
-    NSLog(@"查看11");
+    NSLog(@"查看222");
 }
 
 #pragma mark - 初始化
@@ -69,7 +69,7 @@
         __weak typeof(self) weakself = self;
         self.topView.returnBlock = ^{
             [weakself.webView setGoBack]; // 设置页面回退
-            NSLog(@"页面回退");
+            NSLog(@"developer");
         };
     }
     return _topView;
