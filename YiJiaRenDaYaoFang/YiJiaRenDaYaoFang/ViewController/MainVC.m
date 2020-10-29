@@ -69,6 +69,7 @@
         __weak typeof(self) weakself = self;
         self.topView.returnBlock = ^{
             [weakself.webView setGoBack]; // 设置页面回退
+            NSLog(@"页面回退");
         };
     }
     return _topView;
