@@ -53,11 +53,7 @@
     NSLog(@"添加1");
     NSLog(@"添加2");
     
-<<<<<<< HEAD
     NSLog(@"查看11");
-=======
-    NSLog(@"查看222");
->>>>>>> develope
 }
 
 #pragma mark - 初始化
