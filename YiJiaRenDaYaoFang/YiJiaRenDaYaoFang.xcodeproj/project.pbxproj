@@ -423,6 +423,8 @@
 		18F2F0F5222D1D560051131A /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18F2F0F1222D1D560051131A /* README.txt */; };
 		18F2F0F6222D1D560051131A /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F2F0F3222D1D560051131A /* libWeChatSDK.a */; };
 		18F2F0F7222D1D560051131A /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F2F0F3222D1D560051131A /* libWeChatSDK.a */; };
+		D918A144254B04C9002F92A0 /* version in Resources */ = {isa = PBXBuildFile; fileRef = D918A143254B04C9002F92A0 /* version */; };
+		D918A145254B04C9002F92A0 /* version in Resources */ = {isa = PBXBuildFile; fileRef = D918A143254B04C9002F92A0 /* version */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -760,6 +762,7 @@
 		18F2F0F1222D1D560051131A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		18F2F0F2222D1D560051131A /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		18F2F0F3222D1D560051131A /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		D918A143254B04C9002F92A0 /* version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = version; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1582,6 +1585,7 @@
 		18C520961F8870C900D8F73E /* YiJiaRenDaYaoFang */ = {
 			isa = PBXGroup;
 			children = (
+				D918A143254B04C9002F92A0 /* version */,
 				18C520AE1F88710800D8F73E /* fail.html */,
 				181BE84522966BDE007D7A74 /* Common */,
 				187168CF1FF5E99C00C418C8 /* Config */,
@@ -1775,6 +1779,7 @@
 				18752FF421A651AF00123668 /* icon_back@3x.png in Resources */,
 				18752FF521A651AF00123668 /* qrcode_scan_btn_flash_nor@2x.png in Resources */,
 				181BE84E22966C5B007D7A74 /* WebKitViewController.xib in Resources */,
+				D918A145254B04C9002F92A0 /* version in Resources */,
 				18752FF621A651AF00123668 /* icon_measure@2x.png in Resources */,
 				18752FF721A651AF00123668 /* icon_bluetooth@2x.png in Resources */,
 				18752FF821A651AF00123668 /* icon_clock@3x.png in Resources */,
@@ -1867,6 +1872,7 @@
 				186EB30B200F1D4500CDB9BD /* icon_back@3x.png in Resources */,
 				18716A5A1FF5E99C00C418C8 /* qrcode_scan_btn_flash_nor@2x.png in Resources */,
 				181BE84D22966C5B007D7A74 /* WebKitViewController.xib in Resources */,
+				D918A144254B04C9002F92A0 /* version in Resources */,
 				186EB31C200F1D4500CDB9BD /* icon_measure@2x.png in Resources */,
 				186EB310200F1D4500CDB9BD /* icon_bluetooth@2x.png in Resources */,
 				186EB319200F1D4500CDB9BD /* icon_clock@3x.png in Resources */,
