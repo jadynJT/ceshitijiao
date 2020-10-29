@@ -60,7 +60,7 @@
 - (TopView *)topView {
     if (!_topView) {
         CGFloat marginY = 0;
-        if (iphoneX) marginY = 44;
+        if (iphoneX) marginY = 30;
         
         _topView = [[TopView alloc] initWithFrame:CGRectMake(0, marginY, Screen_width, 44)];
         _topView.backgroundColor = [UIColor whiteColor];
@@ -69,7 +69,7 @@
         __weak typeof(self) weakself = self;
         self.topView.returnBlock = ^{
             [weakself.webView setGoBack]; // 设置页面回退
-            NSLog(@"developer");
+            NSLog(@"master");
         };
     }
     return _topView;
